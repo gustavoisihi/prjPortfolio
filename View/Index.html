@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Página inicial - Exemplo de estrutura padrão para site." />
+    <meta name="description" content="Página inicial - Exemplo de site padrão para seu negócio." />
     <link rel="stylesheet" href="../View/Css/style.css" />
     <script src="../View/Js/main.js"></script>
     <title>Home — Seu Site</title>
@@ -12,7 +12,7 @@
 
 <header>
     <div class="container header-inner">
-        <a class="brand" href="/">SeuSite</a>
+        <a class="brand" href="../View/Index.html">SiteDoSeuNegócio</a>
 
         <nav id="mainNav" aria-label="Navegação principal">
             <button
@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <!--<li><a href="#portfolio">Portfólio</a></li>-->
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -39,9 +39,9 @@
     <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
             <div class="copy">
-                <h1 id="hero-title">Bem-vindo ao SeuSite</h1>
+                <h1 id="hero-title">Bem-vindo ao SiteDoSeuNegócio</h1>
                 <p>
-                    Uma estrutura padrão para iniciar sua página inicial.
+                    Uma descrição padrão para iniciar sua página inicial.
                     Aqui você apresenta sua proposta de valor e chama o usuário para ação.
                 </p>
                 <p>
@@ -163,24 +163,5 @@
         </nav>
     </div>
 </footer>
-
-<script>
-    // Atualiza ano do rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Toggle menu mobile
-    (function () {
-        var menuToggle = document.getElementById('menuToggle');
-        var nav = document.getElementById('mainNav');
-
-        if (!menuToggle || !nav) return;
-
-        menuToggle.addEventListener('click', function () {
-            var open = nav.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', open);
-        });
-    })();
-</script>
-
 </body>
 </html>

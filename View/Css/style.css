@@ -35,8 +35,9 @@ body {
    Header / Nav
 ========================= */
 header {
-    background: #fff;
     border-bottom: 1px solid #e6e9ef;
+    color: #fff;
+    background-color:darkgreen;
 }
 
 .header-inner {
@@ -48,6 +49,15 @@ header {
 
 .brand {
     font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* garante que não fique azul em nenhum estado */
+.brand:visited,
+.brand:hover,
+.brand:active,
+.brand:focus {
     color: var(--accent);
     text-decoration: none;
 }
@@ -68,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #f1f5fb;
+    background: #666;
 }
 
 /* =========================
