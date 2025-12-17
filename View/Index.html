@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Página inicial - Exemplo de estrutura padrão para site." />
+    <link rel="stylesheet" href="../View/Css/style.css" />
+    <script src="../View/Js/main.js"></script>
+    <title>Home — Seu Site</title>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a class="brand" href="/">SeuSite</a>
+
+        <nav id="mainNav" aria-label="Navegação principal">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-expanded="false"
+                aria-controls="mainNav">
+                ☰
+            </button>
+
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+            <div class="copy">
+                <h1 id="hero-title">Bem-vindo ao SeuSite</h1>
+                <p>
+                    Uma estrutura padrão para iniciar sua página inicial.
+                    Aqui você apresenta sua proposta de valor e chama o usuário para ação.
+                </p>
+                <p>
+                    <a class="btn" href="#contato">Começar</a>
+                    <a href="#sobre" class="link-accent">Saiba mais →</a>
+                </p>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-visual-box">
+                    Espaço para imagem / ilustração
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="container section" aria-labelledby="servicos-title">
+        <h2 id="servicos-title">Nossos Serviços</h2>
+
+        <div class="features" role="list">
+            <article class="card" role="listitem">
+                <h3>Design</h3>
+                <p class="muted">
+                    Layouts modernos e responsivos para web e mobile.
+                </p>
+            </article>
+
+            <article class="card" role="listitem">
+                <h3>Desenvolvimento</h3>
+                <p class="muted">
+                    Front-end e back-end sob medida com boas práticas.
+                </p>
+            </article>
+
+            <article class="card" role="listitem">
+                <h3>Consultoria</h3>
+                <p class="muted">
+                    Estratégia digital e otimização de conversão.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="container section" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title">Portfólio</h2>
+
+        <div class="stack stack-row">
+            <div class="card">Projeto A — breve descrição</div>
+            <div class="card">Projeto B — breve descrição</div>
+            <div class="card">Projeto C — breve descrição</div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="container section" aria-labelledby="sobre-title">
+        <h2 id="sobre-title">Sobre nós</h2>
+        <p class="muted">
+            Um parágrafo curto sobre a missão, visão e valores da empresa.
+            Conte um pouco sobre a equipe e diferenciais.
+        </p>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="container section section--bottom" aria-labelledby="contato-title">
+        <h2 id="contato-title">Contato</h2>
+
+        <form action="#" method="post" class="contact-form">
+            <label>
+                Nome
+                <input
+                    type="text"
+                    name="nome"
+                    required
+                    placeholder="Seu nome"
+                    class="input" />
+            </label>
+
+            <label>
+                E-mail
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="seu@exemplo.com"
+                    class="input" />
+            </label>
+
+            <label>
+                Mensagem
+                <textarea
+                    name="mensagem"
+                    rows="4"
+                    placeholder="Escreva sua mensagem"
+                    class="input"></textarea>
+            </label>
+
+            <button class="btn" type="submit">
+                Enviar mensagem
+            </button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <strong>SeuSite</strong>
+            <div class="muted" style="font-size:.9rem">
+                © <span id="year"></span> Todos os direitos reservados
+            </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="rodapé">
+            <a href="/privacidade">Privacidade</a>
+            <a href="/termos">Termos</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    // Atualiza ano do rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle menu mobile
+    (function () {
+        var menuToggle = document.getElementById('menuToggle');
+        var nav = document.getElementById('mainNav');
+
+        if (!menuToggle || !nav) return;
+
+        menuToggle.addEventListener('click', function () {
+            var open = nav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', open);
+        });
+    })();
+</script>
+
+</body>
+</html>
