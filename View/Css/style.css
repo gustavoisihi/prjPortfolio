@@ -6,7 +6,9 @@
     --muted: #666;
     --bg: #f7f9fc;
 
-    font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* =========================
@@ -20,6 +22,7 @@ body {
     margin: 0;
     background: var(--bg);
     color: #111;
+    background-color: #d10505;
 }
 
 /* =========================
@@ -88,8 +91,9 @@ nav a:hover {
     display: flex;
     gap: 2rem;
     align-items: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #fff, #fbfdff);
+    padding: 1rem 4rem;
+    background: linear-gradient(180deg, darkgreen, #d10505ef);
+    color: rgb(238, 238, 238);
 }
 
 .hero .copy {
@@ -104,6 +108,7 @@ nav a:hover {
 .hero p {
     margin: 0 0 1rem;
     color: var(--muted);
+    color: rgb(238, 238, 238);
 }
 
 /* =========================
@@ -116,6 +121,7 @@ nav a:hover {
     padding: 0.6rem 1rem;
     border-radius: 8px;
     text-decoration: none;
+    background-color: green;
 }
 
 /* =========================
@@ -133,6 +139,14 @@ nav a:hover {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+.features img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+    max-height: 300px;
 }
 
 /* =========================
@@ -214,7 +228,15 @@ footer {
 
 .hero-visual {
     width: 320px;
-    max-width: 40%;
+    max-width: 100%;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
 }
 
 .hero-visual-box {
@@ -226,6 +248,8 @@ footer {
     justify-content: center;
     color: var(--muted);
 }
+
+
 
 /* =========================
    Links
@@ -278,4 +302,71 @@ footer {
     color: inherit;
     text-decoration: none;
     margin-right: 1rem;
+}
+
+/* =========================
+   Ajustes mobile finais
+========================= */
+@media (max-width: 720px) {
+    .hero-visual {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-visual-box {
+        height: 160px;
+    }
+
+    /* PORTFÓLIO / STACK */
+    .stack-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav a {
+        display: inline-block;
+        margin: 0.25rem 0;
+    }
+}
+
+/* =========================
+   Efeito de neve
+========================= */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: fixed;
+    top: -20px;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+    animation-name: snow-fall;
+    animation-timing-function: linear;
+}
+
+@keyframes snow-fall {
+    to {
+        transform: translateY(110vh);
+    }
 }

@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Página inicial - Exemplo de site padrão para seu negócio." />
     <link rel="stylesheet" href="../View/Css/style.css" />
-    <script src="../View/Js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <title>Home — Seu Site</title>
 </head>
 <body>
 
 <header>
     <div class="container header-inner">
-        <a class="brand" href="../View/Index.html">SiteDoSeuNegócio</a>
+        <a class="brand" href="../View/Index.html">FELIZ NATAL!</a>
 
         <nav id="mainNav" aria-label="Navegação principal">
             <button
@@ -36,23 +39,28 @@
 <main>
 
     <!-- HERO -->
+     <audio id="bgMusic" loop>
+    <source src="../Assets/audio/natal.mp4" type="audio/mpeg">
+    </audio>
     <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
             <div class="copy">
-                <h1 id="hero-title">Bem-vindo ao SiteDoSeuNegócio</h1>
+                <h1 id="hero-title">Presente de natal da Moreca</h1>
                 <p>
-                    Uma descrição padrão para iniciar sua página inicial.
-                    Aqui você apresenta sua proposta de valor e chama o usuário para ação.
+                    Um presente de natal especial para você minha princesa! Que este seja apenas mais um de 
+                    muitos natais que passaremos juntos, repletos de amor e alegria. Te amo muito!
                 </p>
-                <p>
-                    <a class="btn" href="#contato">Começar</a>
-                    <a href="#sobre" class="link-accent">Saiba mais →</a>
+                <p>  
+                    <a class="btn" href="https://wa.me/5519971234245?text=Eu%20tenho%20o%20melhor%20namorado%20do%20mundo!!">WHATS</a>
                 </p>
+                <button id="musicToggle" class="btn btn-music">
+                    🔊 
+                </button>
             </div>
 
             <div class="hero-visual" aria-hidden="true">
                 <div class="hero-visual-box">
-                    Espaço para imagem / ilustração
+                    <img src="../Assets/Img/imgCasal1.jpg" alt="Ilustração de um casal" />
                 </div>
             </div>
         </div>
@@ -60,33 +68,33 @@
 
     <!-- SERVIÇOS -->
     <section id="servicos" class="container section" aria-labelledby="servicos-title">
-        <h2 id="servicos-title">Nossos Serviços</h2>
+        <h2 id="servicos-title">Nossos Momentos De Natal</h2>
 
         <div class="features" role="list">
             <article class="card" role="listitem">
-                <h3>Design</h3>
+                <h3>TE</h3>
                 <p class="muted">
-                    Layouts modernos e responsivos para web e mobile.
+                    <img src="../Assets/Img/imgNatal.jpg" alt="Ilustração de um casal" />
                 </p>
             </article>
 
             <article class="card" role="listitem">
-                <h3>Desenvolvimento</h3>
+                <h3>AMO</h3>
                 <p class="muted">
-                    Front-end e back-end sob medida com boas práticas.
+                    <img src="../Assets/Img/imgNatal2.jpg" alt="Ilustração de um casal"/>
                 </p>
             </article>
 
             <article class="card" role="listitem">
-                <h3>Consultoria</h3>
+                <h3>MUITO</h3>
                 <p class="muted">
-                    Estratégia digital e otimização de conversão.
+                    <img src="../Assets/Img/imgNatal3.jpg" alt="Ilustração de um casal"/>
                 </p>
             </article>
         </div>
     </section>
 
-    <!-- PORTFÓLIO -->
+    <!-- PORTFÓLIO 
     <section id="portfolio" class="container section" aria-labelledby="portfolio-title">
         <h2 id="portfolio-title">Portfólio</h2>
 
@@ -95,32 +103,24 @@
             <div class="card">Projeto B — breve descrição</div>
             <div class="card">Projeto C — breve descrição</div>
         </div>
-    </section>
+    </section>-->
 
     <!-- SOBRE -->
     <section id="sobre" class="container section" aria-labelledby="sobre-title">
         <h2 id="sobre-title">Sobre nós</h2>
         <p class="muted">
-            Um parágrafo curto sobre a missão, visão e valores da empresa.
-            Conte um pouco sobre a equipe e diferenciais.
+            Namorados lindos perfeitos, que não vê a hora de casar e ter 2 nenecos lindos: Davi e Cecília. 
+            A moreca é a melhor namorada do mundo e o guto é o mais sortudo do mundo por ter ela. 
+            Os morecos gostam muito de sair pra comer besteira, ficar juntinho, dar mt beijo e dar muito muito muito
+            meteco sinistro.  
         </p>
     </section>
 
     <!-- CONTATO -->
     <section id="contato" class="container section section--bottom" aria-labelledby="contato-title">
-        <h2 id="contato-title">Contato</h2>
+        <h2 id="contato-title" TEXT>FIM!!!</h2>
 
-        <form action="#" method="post" class="contact-form">
-            <label>
-                Nome
-                <input
-                    type="text"
-                    name="nome"
-                    required
-                    placeholder="Seu nome"
-                    class="input" />
-            </label>
-
+       <!-- <form action="#" method="post" class="contact-form">
             <label>
                 E-mail
                 <input
@@ -142,7 +142,7 @@
 
             <button class="btn" type="submit">
                 Enviar mensagem
-            </button>
+            </button>-->
         </form>
     </section>
 
@@ -151,9 +151,9 @@
 <footer>
     <div class="container footer-inner">
         <div>
-            <strong>SeuSite</strong>
+            <strong>Site Do Guto</strong>
             <div class="muted" style="font-size:.9rem">
-                © <span id="year"></span> Todos os direitos reservados
+                © 2025 <span id="year"></span> Todos os direitos reservados
             </div>
         </div>
 
@@ -163,5 +163,7 @@
         </nav>
     </div>
 </footer>
+<div class="snow-container"></div>
+<script src="../View/Js/main.js"></script>
 </body>
 </html>
