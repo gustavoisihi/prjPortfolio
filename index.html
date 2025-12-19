@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Página inicial - Exemplo de site padrão para seu negócio." />
+    <meta name="description" content="Página inicial - Portfólio de Gustavo Montes." />
     <link rel="stylesheet" href="View/Css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <title>Home — Seu Site</title>
+    <title>Home — Gustavo Montes</title>
 </head>
 <body>
 
 <header>
     <div class="container header-inner">
-        <a class="brand" href="/Index.html">FELIZ NATAL!</a>
+        <a>LOGO</a>
 
         <nav id="mainNav" aria-label="Navegação principal">
             <button
@@ -27,10 +27,9 @@
             </button>
 
             <ul>
-               <!-- <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>-->
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </div>
@@ -45,13 +44,14 @@
     <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
             <div class="copy">
-                <h1 id="hero-title">Presente de natal da Moreca</h1>
+                <h1 id="hero-title">Gustavo Montes Isihi</h1>
                 <p>
-                    Um presente de natal especial para você minha princesa! Que este seja apenas mais um de 
-                    muitos natais que passaremos juntos, repletos de amor e alegria. Te amo muito!
+                    Desenvolvedor Júnior com experiência real em sistemas corporativos,
+                    atuando com ASP.NET, C#, Angular, PostgreSQL e Delphi.
+                    Forte vivência em manutenção de sistemas, regras de negócio e suporte ao usuário.
                 </p>
                 <p>  
-                    <a class="btn" href="https://wa.me/5519971234245?text=Eu%20tenho%20o%20melhor%20namorado%20do%20mundo!!">WHATS</a>
+                    <a class="btn" href="https://wa.me/5519971234245">CONTATO</a>
                 </p>
                 <button id="musicToggle" class="btn btn-music">
                     🔊 
@@ -60,7 +60,7 @@
 
             <div class="hero-visual" aria-hidden="true">
                 <div class="hero-visual-box">
-                    <img src="Assets/Img/imgCasal1.jpg" alt="Ilustração de um casal" />
+                    <img src="Assets/Img/imgGustavo.jpg" alt="imgGustavoMontes" />
                 </div>
             </div>
         </div>
@@ -68,51 +68,58 @@
 
     <!-- SERVIÇOS -->
     <section id="servicos" class="container section" aria-labelledby="servicos-title">
-        <h2 id="servicos-title">Nossos Momentos De Natal</h2>
+        <h2 id="servicos-title">Experiência</h2>
 
-        <div class="features" role="list">
-            <article class="card" role="listitem">
-                <h3>TE</h3>
-                <p class="muted">
-                    <img src="Assets/Img/imgNatal.jpg" alt="Ilustração de um casal" />
-                </p>
-            </article>
+        <div class="carousel">
+  <button class="carousel-btn prev" aria-label="Anterior">‹</button>
 
-            <article class="card" role="listitem">
-                <h3>AMO</h3>
-                <p class="muted">
-                    <img src="Assets/Img/imgnatal2.jpg" alt="Ilustração de um casal"/>
-                </p>
-            </article>
+  <div class="carousel-track">
+    <article class="card">
+      <h3>Analista De Suporte - Maio de 2023</h3>
+      <p class="muted">
+        Atuei como analista de suporte técnico em TI, prestando suporte a usuários,
+        realizando instalações, atualizações e manutenção em banco de dados PostgreSQL.
+      </p>
+    </article>
 
-            <article class="card" role="listitem">
-                <h3>MUITO</h3>
-                <p class="muted">
-                    <img src="Assets/Img/imgnatal3.jpg" alt="Ilustração de um casal"/>
-                </p>
-            </article>
-        </div>
+    <article class="card">
+      <h3>Analista de Testes Jr. - Abril de 2024</h3>
+      <p class="muted">
+        Realizei testes funcionais e de regressão, documentando bugs e acompanhando a resolução de problemas.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Desenvolvedor Jr. - Junho de 2024 (ATUAL)</h3>
+      <p class="muted">
+        Desenvolvi aplicações web utilizando tecnologias como HTML, CSS, JavaScript e Angular,
+        além de trabalhar com C# e PostgreSQL.
+      </p>
+    </article>
+  </div>
+
+  <button class="carousel-btn next" aria-label="Próximo">›</button>
+</div>
     </section>
-
-    <!-- PORTFÓLIO 
+    <!-- PORTFÓLIO -->
     <section id="portfolio" class="container section" aria-labelledby="portfolio-title">
-        <h2 id="portfolio-title">Portfólio</h2>
+        <h2 id="portfolio-title">Projetos</h2>
 
         <div class="stack stack-row">
             <div class="card">Projeto A — breve descrição</div>
             <div class="card">Projeto B — breve descrição</div>
             <div class="card">Projeto C — breve descrição</div>
         </div>
-    </section>-->
+    </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="container section" aria-labelledby="sobre-title">
-        <h2 id="sobre-title">Sobre nós</h2>
+        <h2 id="sobre-title">Sobre mim</h2>
         <p class="muted">
-            Namorados lindos perfeitos, que não vê a hora de casar e ter 2 nenecos lindos: Davi e Cecília. 
-            A moreca é a melhor namorada do mundo e o guto é o mais sortudo do mundo por ter ela. 
-            Os morecos gostam muito de sair pra comer besteira, ficar juntinho, dar mt beijo e dar muito muito muito
-            meteco sinistro.  
+            Sou desenvolvedor júnior com experiência prática em ambientes corporativos,
+            tendo atuado desde suporte técnico até desenvolvimento de sistemas web e desktop.
+            Gosto de entender regras de negócio e transformar problemas reais em soluções funcionais.
+
         </p>
     </section>
 
@@ -151,7 +158,7 @@
 <footer>
     <div class="container footer-inner">
         <div>
-            <strong>Site Do Guto</strong>
+            <strong>Desenvolvido por Gustavo Montes.</strong>
             <div class="muted" style="font-size:.9rem">
                 © 2025 <span id="year"></span> Todos os direitos reservados
             </div>

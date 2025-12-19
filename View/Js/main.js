@@ -1,4 +1,7 @@
     const snowContainer = document.querySelector('.snow-container');
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
 
 function createSnowflake() {
     const snowflake = document.createElement('div');
@@ -20,7 +23,6 @@ function createSnowflake() {
 // cria flocos continuamente
 setInterval(createSnowflake, 800);
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const music = document.getElementById('bgMusic');
     const btn = document.getElementById('musicToggle');
@@ -38,3 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
         isPlaying = !isPlaying;
     });
 });
+
+if (track && prevBtn && nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+  });
+}
