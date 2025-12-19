@@ -258,6 +258,10 @@ footer {
 
 @media (max-width: 720px) {
 
+section {
+    padding: 3rem 1rem;
+  }
+
   .hero-inner {
     display: flex;
     flex-direction: column;
