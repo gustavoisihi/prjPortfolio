@@ -9,6 +9,7 @@
   --dark: #111827;
   --card-bg: #ffffff;
   --radius: 14px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* =========================
@@ -22,7 +23,6 @@ body {
   margin: 0;
   background: var(--bg);
   color: #111827;
-  font-family: "Almendra", serif;
   font-weight: 700;
   line-height: 1.6;
   overflow-x: hidden;
