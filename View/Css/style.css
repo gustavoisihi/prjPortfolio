@@ -84,6 +84,29 @@ nav a:hover {
 }
 
 /* =========================
+   IDIOMA
+========================= */
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-switch a,
+.lang-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.lang-switch a:hover,
+.lang-btn:hover {
+  opacity: 0.8;
+}
+
+/* =========================
    HERO
 ========================= */
 .hero {
@@ -258,4 +281,79 @@ footer {
   .carousel-track .card {
     scroll-snap-align: center;
   }
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+}
+
+.contact-card strong {
+  display: block;
+}
+
+.contact-card span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   FORMAÇÕES
+========================= */
+
+.education-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.education-icon {
+  font-size: 1.8rem;
+}
+
+.education-card strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.education-card p {
+  margin: 0;
 }

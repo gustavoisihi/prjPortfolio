@@ -15,15 +15,17 @@
 
 <header>
     <div class="container header-inner">
-        <a>LOGO</a>
+        <a>PORTFÓLIO</a>
 
         <nav id="mainNav" aria-label="Navegação principal">
             <ul>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="View/index-en.html" class="lang-btn" title="Translate to English">🌐</a></li>
             </ul>
         </nav>
+        
     </div>
 </header>
 
@@ -50,6 +52,16 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="container section" aria-labelledby="sobre-title">
+        <h2 id="sobre-title">Sobre mim</h2>
+        <p class="muted">
+            Sou desenvolvedor júnior com experiência prática em ambientes corporativos,
+            tendo atuado desde suporte técnico até desenvolvimento de sistemas web e desktop.
+            Gosto de entender regras de negócio e transformar problemas reais em soluções funcionais.
+        </p>
     </section>
 
     <!-- SERVIÇOS -->
@@ -98,46 +110,87 @@
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="container section" aria-labelledby="sobre-title">
-        <h2 id="sobre-title">Sobre mim</h2>
-        <p class="muted">
-            Sou desenvolvedor júnior com experiência prática em ambientes corporativos,
-            tendo atuado desde suporte técnico até desenvolvimento de sistemas web e desktop.
-            Gosto de entender regras de negócio e transformar problemas reais em soluções funcionais.
+    <!-- FORMAÇÕES -->
+<section id="formacoes" class="container section" aria-labelledby="formacoes-title">
+  <h2 id="formacoes-title">Formações</h2>
 
-        </p>
-    </section>
+  <div class="education-list">
+    <article class="education-card">
+      <span class="education-icon">🎓</span>
+      <div>
+        <strong>Engenharia de Software</strong>
+        <p class="muted">Bacharelado — Cruzeiro do Sul (em andamento)</p>
+      </div>
+    </article>
+
+    <article class="education-card">
+      <span class="education-icon">💻</span>
+      <div>
+        <strong>Análise e Desenvolvimento de Sistemas</strong>
+        <p class="muted">Tecnólogo — CEUNSP</p>
+      </div>
+    </article>
+
+    <article class="education-card">
+      <span class="education-icon">🖥️</span>
+      <div>
+        <strong>Técnico em Informática</strong>
+        <p class="muted">IFSP - Instituto Federal De São Paulo</p>
+      </div>
+    </article>
+
+    <article class="education-card">
+      <span class="education-icon">🏫</span>
+      <div>
+        <strong>Ensino Médio</strong>
+        <p class="muted">SESI SP</p>
+      </div>
+    </article>
+  </div>
+</section> 
 
     <!-- CONTATO -->
     <section id="contato" class="container section section--bottom" aria-labelledby="contato-title">
-        <h2 id="contato-title" TEXT>FIM!!!</h2>
+  <h2 id="contato-title">Contato</h2>
 
-       <!-- <form action="#" method="post" class="contact-form">
-            <label>
-                E-mail
-                <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="seu@exemplo.com"
-                    class="input" />
-            </label>
+  <p class="muted">
+    Quer falar comigo? Fique à vontade para entrar em contato por qualquer um dos canais abaixo.
+  </p>
 
-            <label>
-                Mensagem
-                <textarea
-                    name="mensagem"
-                    rows="4"
-                    placeholder="Escreva sua mensagem"
-                    class="input"></textarea>
-            </label>
+  <div class="contact-cards">
+    <a class="contact-card" href="mailto:gustavo@email.com">
+      <span class="contact-icon">✉️</span>
+      <div>
+        <strong>Email</strong>
+        <span>gustavo@email.com</span>
+      </div>
+    </a>
 
-            <button class="btn" type="submit">
-                Enviar mensagem
-            </button>-->
-        </form>
-    </section>
+    <a class="contact-card" href="https://wa.me/5519971234245" target="_blank">
+      <span class="contact-icon">💬</span>
+      <div>
+        <strong>WhatsApp</strong>
+        <span>Falar agora</span>
+      </div>
+    </a>
+
+    <a class="contact-card" href="https://www.linkedin.com/in/montesgustavo" target="_blank">
+      <span class="contact-icon">💼</span>
+      <div>
+        <strong>LinkedIn</strong>
+        <span>Ver perfil</span>
+      </div>
+    </a>
+
+    <a class="contact-card" href="https://github.com/gustavoisihi" target="_blank">
+      <span class="contact-icon">🐙</span>
+      <div>
+        <strong>GitHub</strong>
+        <span>Ver projetos</span>
+      </div>
+    </a>
+  </div>
+</section>
 
 </main>
 
