@@ -2,13 +2,13 @@
    VARIÁVEIS
 ========================= */
 :root {
-  --accent: #0b86ff;
-  --muted: #666;
-  --bg: #bdbdbd;
-  --dark: rgb(59, 59, 59);
-
-  font-family: "Almendra", serif;
-  font-weight: 700;
+  --accent: #2563eb; /* azul mais profissional */
+  --accent-soft: rgba(37, 99, 235, 0.15);
+  --muted: #6b7280;
+  --bg: #f3f4f6;
+  --dark: #111827;
+  --card-bg: #ffffff;
+  --radius: 14px;
 }
 
 /* =========================
@@ -21,7 +21,10 @@
 body {
   margin: 0;
   background: var(--bg);
-  color: #111;
+  color: #111827;
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -30,15 +33,11 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .section {
-  padding: 2rem 0;
-}
-
-.section--bottom {
-  padding-bottom: 2rem;
+  padding: 3rem 0;
 }
 
 /* =========================
@@ -47,6 +46,9 @@ body {
 header {
   background: var(--dark);
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-inner {
@@ -58,11 +60,7 @@ header {
 .brand {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
-}
-
-.brand:hover {
-  opacity: 0.85;
+  font-size: 1.1rem;
 }
 
 nav ul {
@@ -74,56 +72,54 @@ nav ul {
 }
 
 nav a {
-  color: inherit;
+  color: #e5e7eb;
   text-decoration: none;
   padding: 0.4rem 0.6rem;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
 }
 
 nav a:hover {
-  background: rgba(64, 11, 255, 0.5);
+  background: var(--accent-soft);
 }
 
 /* =========================
    HERO
 ========================= */
 .hero {
-  background: linear-gradient(180deg, var(--dark), #bdbdbdef);
-  color: #eee;
+  background: linear-gradient(180deg, var(--dark), #1f2933);
+  color: #f9fafb;
 }
 
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
-  margin-bottom: 1rem;
-}
-
-.hero-visual {
-  max-width: 300px;
+  color: #d1d5db;
+  max-width: 500px;
 }
 
 .hero-visual-box {
-  width: 250px;
+  width: 260px;
   height: 200px;
-  background: linear-gradient(135deg, #6e6e6e, #cecece);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #374151, #6b7280);
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-visual img {
-  width: 75%;
-  border-radius: 12px;
+  width: 70%;
+  border-radius: var(--radius);
 }
 
 /* =========================
@@ -133,56 +129,85 @@ nav a:hover {
   display: inline-block;
   background: var(--accent);
   color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
   text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 .card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  background: var(--card-bg);
+  padding: 1.4rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+  font-weight: 400;
 }
 
 /* =========================
-   STACK / PORTFÓLIO
+   CAROUSEL - EXPERIÊNCIA
 ========================= */
-.stack {
+.carousel {
+  position: relative;
   display: flex;
+  align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
-.stack-row .card {
-  flex: 1;
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* =========================
-   FORMULÁRIO
-========================= */
-.contact-form {
-  max-width: 540px;
-  display: grid;
-  gap: 0.5rem;
+.carousel-track .card {
+  flex: 0 0 100%;
 }
 
-.input {
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #dde6f1;
+/* Botões */
+.carousel-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: opacity 0.2s;
+}
+
+.carousel-btn:hover {
+  opacity: 0.85;
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  background: #000;
-  color: #d8d8d8;
+  background: #020617;
+  color: #cbd5f5;
   padding: 2rem 1rem;
 }
 
@@ -190,22 +215,6 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.footer-nav a {
-  color: inherit;
-  text-decoration: none;
-  margin-right: 1rem;
-}
-
-/* =========================
-   MENU MOBILE
-========================= */
-.menu-toggle {
-  display: none;
-  font-size: 1.25rem;
-  background: none;
-  border: 0;
 }
 
 /* =========================
@@ -221,15 +230,11 @@ footer {
     right: 1rem;
     top: 64px;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: var(--radius);
   }
 
   nav.open ul {
     display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 
   .hero-inner {
@@ -237,79 +242,6 @@ footer {
     text-align: center;
   }
 
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* =========================
-   EFEITO DE NEVE
-========================= */
-.snow-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.snowflake {
-  position: fixed;
-  top: -20px;
-  color: #fff;
-  animation: snow-fall linear;
-}
-
-@keyframes snow-fall {
-  to {
-    transform: translateY(110vh);
-  }
-}
-
-/* =========================
-   CAROUSEL - EXPERIÊNCIA
-========================= */
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.carousel-track {
-  display: flex;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-.carousel-track .card {
-  flex: 0 0 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-.carousel-track h3 {
-  color: rgb(64, 11, 255);
-}
-
-/* Botões */
-.carousel-btn {
-  background: rgb(64, 11, 255);
-  color: #fff;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.carousel-btn:hover {
-  opacity: 0.85;
-}
-
-/* Mobile: swipe natural */
-@media (max-width: 720px) {
   .carousel-btn {
     display: none;
   }
@@ -320,6 +252,6 @@ footer {
   }
 
   .carousel-track .card {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 }
