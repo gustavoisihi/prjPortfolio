@@ -258,15 +258,17 @@ footer {
 
 @media (max-width: 720px) {
 
-section {
-    padding: 3rem 1rem;
+  section {
+    padding: 3rem 0;
   }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
   .hero-inner {
     display: flex;
