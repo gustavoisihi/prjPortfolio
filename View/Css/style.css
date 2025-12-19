@@ -184,6 +184,10 @@ nav a:hover {
   color: var(--accent);
 }
 
+.card p {
+  line-height: 1.6;
+}
+
 .muted {
   color: var(--muted);
   font-weight: 400;
