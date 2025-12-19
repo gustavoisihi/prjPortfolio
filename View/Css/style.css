@@ -83,14 +83,6 @@ nav a:hover {
   background: var(--accent-soft);
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 /* =========================
    IDIOMA
 ========================= */
@@ -252,41 +244,105 @@ footer {
   flex-wrap: wrap;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* ===== MENU MOBILE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff; /* 🔥 visível no header escuro */
+}
+
 @media (max-width: 720px) {
   .menu-toggle {
     display: block;
   }
 
+  nav {
+    position: relative;
+  }
+
   nav ul {
     display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
   }
 
   nav ul.open {
     display: flex;
   }
+
+  nav ul a {
+    color: #111;
+  }
+
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+   .section h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .section p {
+    line-height: 1.6;
+  }
 }
 
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
+/* ===== CAROUSEL ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+}
 
-  .carousel-btn {
-    display: none;
-  }
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+}
 
-  .carousel-track {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
+.carousel-track .card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
 
-  .carousel-track .card {
-    scroll-snap-align: center;
-  }
+/* Botões */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb; 
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
 
+.carousel-btn.prev {
+  left: -20px;
+}
+
+.carousel-btn.next {
+  right: -20px;
+}
+
+.carousel-btn:hover {
+  opacity: 0.85;
+}
 
 /* =========================
    CONTATO
