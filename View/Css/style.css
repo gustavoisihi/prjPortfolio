@@ -83,6 +83,14 @@ nav a:hover {
   background: var(--accent-soft);
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* =========================
    IDIOMA
 ========================= */
@@ -248,21 +256,18 @@ footer {
    RESPONSIVO
 ========================= */
 @media (max-width: 720px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    left: 1rem;
-    right: 1rem;
-    top: 64px;
-    padding: 1rem;
-    border-radius: var(--radius);
+  .menu-toggle {
+    display: block;
   }
 
-  nav.open ul {
+  nav ul {
+    display: none;
+  }
+
+  nav ul.open {
     display: flex;
   }
+}
 
   .hero-inner {
     flex-direction: column;
@@ -281,7 +286,7 @@ footer {
   .carousel-track .card {
     scroll-snap-align: center;
   }
-}
+
 
 /* =========================
    CONTATO
